@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Noto_Serif_Bengali } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Marquee from "@/components/Marquee";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 const notoSerifBengali = Noto_Serif_Bengali({
- 
-  subsets: ["latin",'bengali'],
+  subsets: ["latin", "bengali"],
 });
 
 const geistMono = Geist_Mono({
@@ -27,16 +27,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-    data-theme = 'light'
+      data-theme="light"
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${notoSerifBengali.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
         <Marquee></Marquee>
-        {children}
+        <main className="flex-1">{children}</main>
         <Footer></Footer>
-        </body>
+        <Toaster></Toaster>
+      </body>
     </html>
   );
 }
