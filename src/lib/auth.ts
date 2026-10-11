@@ -7,7 +7,7 @@ const client = new MongoClient(process.env.MONGO_DB_URL as string);
 const db = client.db("The-Insight-News");
 
 export const auth = betterAuth({
-    baseURL: process.env.BETTER_AUTH_URL,
+    // baseURL: process.env.BETTER_AUTH_URL,
 
     emailAndPassword: {
         enabled: true,
