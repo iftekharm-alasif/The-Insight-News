@@ -5,7 +5,7 @@
 
 ## 🔗 Live & Relevant Links
 
-* **Live Website:** --
+* **Live Website:** https://the-insight-news-nine.vercel.app/
 * **GitHub Repository:** https://github.com/iftekharm-alasif/the-insight-news
 
 ## 🛠️ Technologies Used
